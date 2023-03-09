@@ -2,10 +2,18 @@
     background-color: red;
 }
 
-#rojo1 {
-    background-color: red;
+#azul {
+    background-color: blue;
 }
 
 #verde {
     background-color: green;
+}
+
+#morado {
+    background-color: violet;
+}
+
+.naranja {
+    background-color: orange;
 }
