@@ -1,24 +1,28 @@
 <?php
+require_once("../Models/AutorModels.php");
+require_once("../Config/database.php");
+
     class AutorController{
 
-        private $opcion;
+        private $codigo;
+        private $nombre;
 
-        public function __construct(){
-            if(isset($_POST['guardar'])){
-                $this->guardar();
-            }
+        public function __construct($codigo, $nombre, $opc){
+            $this->codigo = $codigo;
+            $this->nombre = $nombre;
+            $this->guardar();
         }
 
         public function index(){
-            require_once "Views/pages/AgregarAutor.php";
+            require_once "../Views/pages/AgregarAutor.php";
         }
 
         public function guardar(){
-            $codautor = $_POST['codigo'];
-            $nomautor = $_POST['nombre'];
+            //$codautor = $_POST['codigo'];
+            //$nomautor = $_POST['nombre'];
 
             $autor = new AutorModels();
-            $autor->insertar($codautor, $nomautor);
+            $autor->insertar($this->codigo, $this->nombre);
             $this->index();
         }
     }

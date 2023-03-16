@@ -8,7 +8,7 @@
         }
 
         public function insertar($codigo, $nombre){
-            $resultado = $this->db->query("INSERT INTO autor values('$codigo', '$nombre')");
+            $resultado = $this->db->query("INSERT INTO autor values('$codigo', '$nombre', '112')");
         }
 
     }
