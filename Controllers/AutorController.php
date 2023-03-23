@@ -1,6 +1,7 @@
 <?php
-require_once("../Models/AutorModels.php");
-require_once("../Config/database.php");
+require_once(dirname(__DIR__)."./Models/AutorModels.php");
+require_once(dirname(__DIR__)."./Config/database.php");
+
 
     class AutorController{
 
@@ -14,7 +15,9 @@ require_once("../Config/database.php");
         }
 
         public function index(){
-            require_once "../Views/pages/AgregarAutor.php";
+            $autor = new AutorModels();
+            $data["autor"] = $autor->get_autores();
+            require_once "../Views/pages/indexAutor.php";
         }
 
         public function guardar(){
