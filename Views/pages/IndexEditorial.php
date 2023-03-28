@@ -26,8 +26,8 @@
                 echo "<tr>";
                     echo "<th>".$dato["codigoEditorial"]."</th>";
                     echo "<th>".$dato["nombreEditorial"]."</th>";
-                    echo "<th>Editar</th>";
-                    echo "<th><a href='EliminarEditorial.php?id=".$dato["codigoEditorial"]."'>Borrar</a></th>";
+                    echo "<th><a href='http://localhost/proyecto_dev/Views/pages/EditarEditorial.php?id=".$dato["codigoEditorial"]."'>Editar</a></th>";
+                    echo "<th><a href='http://localhost/proyecto_dev/Views/pages/EliminarEditorial.php?id=".$dato["codigoEditorial"]."'>Borrar</a></th>";
                 echo "</tr>";
             }
             ?>

@@ -10,9 +10,12 @@ require_once(dirname(__DIR__)."./Config/database.php");
         public function __construct($codigo, $nombre, $opc){
             $this->codigo = $codigo;
             $this->nombre = $nombre;
-            if($codigo!=""){
+            if($opc=="Actualizar"){
+                $this->actualizar();
+            }else if($codigo!=""){
                 $this->guardar();
             }
+            
         }
 
         public function index(){
@@ -37,6 +40,21 @@ require_once(dirname(__DIR__)."./Config/database.php");
             $r = $editorial->delete_editorial($id);
 
             require_once dirname(__DIR__)."./Views/pages/IndexEditorial.php";
+        }
+
+        public function editar($codigo){
+            $editorial = new EditorialModels();
+
+            $data["editorial"] = $editorial->get_id($codigo);
+            
+            return $data;
+        }
+
+        public function actualizar(){
+            $autor = new EditorialModels();
+            $autor->actualizar($this->codigo, $this->nombre);
+
+            require_once "../Views/pages/IndexEditorial.php";
         }
     }
 ?>

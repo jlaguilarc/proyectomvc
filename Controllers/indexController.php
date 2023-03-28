@@ -7,6 +7,8 @@ require_once("EditorialController.php");
         $objeto = new AutorController($_POST['codigo'], $_POST['nombre'], $_POST['guardar']);
     }else if($opcion == "editorial"){
         $objeto = new EditorialController($_POST['codigo'], $_POST['nombre'], $_POST['guardar']);
+    }else if($opcion == "updateeditorial"){
+        $objeto = new EditorialController($_POST['codigo'], $_POST['nombre'], "Actualizar");
     }
 
 ?>
