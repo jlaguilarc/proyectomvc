@@ -1,5 +1,5 @@
 <?php
-    require_once(dirname(__DIR__)."./layout/header.php");
+    include(dirname(__DIR__)."./layout/header.php");
 ?>
 <h1>Agregar Editorial</h1>
 <form name="AgregarEditorial" method="POST" action="../../Controllers/indexController.php">
