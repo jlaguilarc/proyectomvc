@@ -1,5 +1,5 @@
 <?php
-    include(dirname(__DIR__)."./layout/header.php");
+    include("../layout/header.php");
 ?>
 <h1>Agregar Editorial</h1>
 <form name="AgregarEditorial" method="POST" action="../../Controllers/indexController.php">
@@ -17,5 +17,5 @@
         </form>
 
 <?php
-    include(dirname(__DIR__)."./layout/footer.php");
+    include("../layout/footer.php");
 ?>
