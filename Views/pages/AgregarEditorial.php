@@ -1,8 +1,8 @@
 <?php
-    include("app/layout/header.php");
+    include(dirname(__DIR__)."./layout/header.php");
 ?>
 <h1>Agregar Editorial</h1>
-<form name="AgregarEditorial" method="POST" action="app/Controllers/indexController.php">
+<form name="AgregarEditorial" method="POST" action="../../Controllers/indexController.php">
             <div class="form-floating mb-3">
                 <input type="text" name="codigo" class="form-control" id="codigo" placeholder="name@example.com">
                 <label for="codigo">Código Editorial</label>
@@ -17,5 +17,5 @@
         </form>
 
 <?php
-    include("app/layout/footer.php");
+    include(dirname(__DIR__)."./layout/footer.php");
 ?>

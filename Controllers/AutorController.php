@@ -1,6 +1,6 @@
 <?php
-require_once("https://proyectomvc-production-52e8.up.railway.app/Models/AutorModels.php");
-require_once("https://proyectomvc-production-52e8.up.railway.app/Config/database.php");
+require_once(dirname(__DIR__)."./Models/AutorModels.php");
+require_once(dirname(__DIR__)."./Config/database.php");
 
 
     class AutorController{
@@ -17,7 +17,7 @@ require_once("https://proyectomvc-production-52e8.up.railway.app/Config/database
         public function index(){
             $autor = new AutorModels();
             $data["autor"] = $autor->get_autores();
-            require_once "https://proyectomvc-production-52e8.up.railway.app/Views/pages/indexAutor.php";
+            require_once "../Views/pages/indexAutor.php";
         }
 
         public function guardar(){
