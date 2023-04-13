@@ -2,7 +2,7 @@
     include($_SERVER['DOCUMENT_ROOT']."/Views/layout/header.php");
 ?>
 <h1>Agregar Editorial</h1>
-<form name="AgregarEditorial" method="POST" action="<?php echo $_SERVER['DOCUMENT_ROOT']?>/Controllers/indexController.php">
+<form name="AgregarEditorial" method="POST" action="<?php $_SERVER['DOCUMENT_ROOT']?>/Controllers/indexController.php">
             <div class="form-floating mb-3">
                 <input type="text" name="codigo" class="form-control" id="codigo" placeholder="name@example.com">
                 <label for="codigo">Código Editorial</label>
