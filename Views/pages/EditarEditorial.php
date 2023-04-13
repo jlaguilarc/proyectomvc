@@ -9,8 +9,13 @@
 ?>
 <form name="AgregarEditorial" method="POST" action="<?php $_SERVER['DOCUMENT_ROOT']?>/Controllers/indexController.php">
             <div class="form-floating mb-3">
-                <input type="text" name="codigo" class="form-control" id="codigo" value="<?php echo $_GET['id'] ?>" readonly>
+                <?php 
+                foreach($data["editorial"] as $dato){
+                ?><input type="text" name="codigo" class="form-control" id="codigo" value="<?php echo $dato["codigoEditorial"] ?>" readonly>
                 <label for="codigo">Código Editorial</label>
+                <?php
+                }
+                ?>
             </div>
             
             <div class="form-floating mb-3">
