@@ -5,12 +5,13 @@
         private $editorial;
 
         public function __construct(){
-            $this->db = Conexion::Conexion();
+            $this->db = Conexion::Conectar();
             $this->editorial = array();
         }
 
         public function insertar($codigo, $nombre){
             $resultado = $this->db->query("INSERT INTO editorial values('$codigo', '$nombre')");
+            $this->db->close();
         }
 
         public function get_editoriales(){
