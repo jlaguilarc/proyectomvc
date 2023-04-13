@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/Models/EditorialModels.php");
-require_once($_SERVER['DOCUMENT_ROOT']."/Config/database.php");
+include($_SERVER['DOCUMENT_ROOT']."/Config/database.php");
 
     class EditorialController{
 
