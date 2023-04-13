@@ -16,8 +16,8 @@
             <div class="form-floating mb-3">
                 <?php
                 foreach($data["editorial"] as $dato){
-                    echo '<input type="text" name="nombre" class="form-control" id="nombre" value="'.$dato["nombreEditorial"].'" placeholder="Password">';
-                    echo '<label for="nombre">Nombre Editorial</label>';
+                    ?><input type="text" name="nombre" class="form-control" id="nombre" value='<?php echo $dato["nombreEditorial"] ?>' placeholder="Password">
+                    <?php echo '<label for="nombre">Nombre Editorial</label>';
                 }
                 ?>
                 <input type="hidden" name="controller" value="updateeditorial">
