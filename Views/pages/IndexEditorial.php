@@ -1,6 +1,6 @@
 <?php
-    require_once("https://proyectomvc-production-52e8.up.railway.app/Views/layout/header.php");
-    require_once("https://proyectomvc-production-52e8.up.railway.app/Controllers/EditorialController.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/Views/layout/header.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/Controllers/EditorialController.php");
 ?>
 <h2>Página de Editoriales</h2>
 
@@ -35,5 +35,5 @@
     </table>
 </div>
 <?php
-    include(dirname(__DIR__)."./layout/footer.php");
+    include($_SERVER['DOCUMENT_ROOT']."./layout/footer.php");
 ?>
