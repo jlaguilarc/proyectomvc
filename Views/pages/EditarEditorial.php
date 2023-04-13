@@ -1,13 +1,13 @@
 <?php
-    require_once(dirname(__DIR__)."./layout/header.php");
-    require_once(dirname(__DIR__)."../../Controllers/EditorialController.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/Views/layout/header.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/Controllers/EditorialController.php");
 ?>
 <h1>Editar Editorial</h1>
 <?php
     $info = new EditorialController("","","");
     $data = $info->editar($_GET['id']);
 ?>
-<form name="AgregarEditorial" method="POST" action="../../Controllers/indexController.php">
+<form name="AgregarEditorial" method="POST" action="<?php echo $_SERVER['DOCUMENT_ROOT']?>/Controllers/indexController.php">
             <div class="form-floating mb-3">
                 <input type="text" name="codigo" class="form-control" id="codigo" value="<?php echo $_GET['id'] ?>" readonly>
                 <label for="codigo">Código Editorial</label>
@@ -27,5 +27,5 @@
         </form>
 
 <?php
-    include(dirname(__DIR__)."./layout/footer.php");
+    include($_SERVER['DOCUMENT_ROOT']."/Views/layout/footer.php");
 ?>
