@@ -1,5 +1,5 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT']."./Views/layout/header.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/Views/layout/header.php");
     require_once($_SERVER['DOCUMENT_ROOT']."./Controllers/EditorialController.php");
 ?>
 <h2>Página de Editoriales</h2>
