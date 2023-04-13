@@ -1,8 +1,6 @@
 <?php
-//include('Routes.php');
 require_once($_SERVER['DOCUMENT_ROOT']."/Models/EditorialModels.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/Config/database.php");
-//require_once(EDITORIAL_CONTROLLER);
 
     class EditorialController{
 
