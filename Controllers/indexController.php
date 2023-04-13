@@ -1,6 +1,6 @@
 <?php
-require_once("AutorController.php");
-require_once("EditorialController.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/Controllers/AutorController.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/Controllers/EditorialController.php");
 
     $opcion = $_POST['controller'];
     if($opcion == "autor"){
