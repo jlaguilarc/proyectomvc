@@ -5,7 +5,7 @@
         private $editorial;
 
         public function __construct(){
-            $this->db = Conexion::Conectar();
+            $this->db = Conect::Conectar();
             $this->editorial = array();
         }
 
