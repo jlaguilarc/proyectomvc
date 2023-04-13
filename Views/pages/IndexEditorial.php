@@ -4,7 +4,7 @@
 ?>
 <h2>Página de Editoriales</h2>
 
-<a href="AgregarEditorial.php" class="btn btn-primary">Agregar Editorial</a>
+<a href="<?php $_SERVER['DOCUMENT_ROOT']?>/Views/pages/AgregarEditorial.php" class="btn btn-primary">Agregar Editorial</a>
 
 <br>
 <br>
