@@ -35,5 +35,5 @@
     </table>
 </div>
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT']."Views/layout/footer.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/Views/layout/footer.php");
 ?>
