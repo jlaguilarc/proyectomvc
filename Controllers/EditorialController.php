@@ -1,6 +1,8 @@
 <?php
-require_once(dirname(__DIR__)."./Models/EditorialModels.php");
-require_once(dirname(__DIR__)."./Config/database.php");
+//include('Routes.php');
+require_once($_SERVER['DOCUMENT_ROOT']."./Models/EditorialModels.php");
+require_once($_SERVER['DOCUMENT_ROOT']."./Config/database.php");
+//require_once(EDITORIAL_CONTROLLER);
 
     class EditorialController{
 
@@ -31,7 +33,7 @@ require_once(dirname(__DIR__)."./Config/database.php");
             $autor = new EditorialModels();
             $autor->insertar($this->codigo, $this->nombre);
 
-            require_once "../Views/pages/IndexEditorial.php";
+            require_once $_SERVER['DOCUMENT_ROOT']."/Views/pages/IndexEditorial.php";
             //$this->index();
         }
 
@@ -39,7 +41,7 @@ require_once(dirname(__DIR__)."./Config/database.php");
             $editorial = new EditorialModels();
             $r = $editorial->delete_editorial($id);
 
-            require_once dirname(__DIR__)."./Views/pages/IndexEditorial.php";
+            require_once $_SERVER['DOCUMENT_ROOT']."/Views/pages/IndexEditorial.php";
         }
 
         public function editar($codigo){
@@ -54,7 +56,7 @@ require_once(dirname(__DIR__)."./Config/database.php");
             $autor = new EditorialModels();
             $autor->actualizar($this->codigo, $this->nombre);
 
-            require_once "../Views/pages/IndexEditorial.php";
+            require_once $_SERVER['DOCUMENT_ROOT']."/Views/pages/IndexEditorial.php";
         }
     }
 ?>
