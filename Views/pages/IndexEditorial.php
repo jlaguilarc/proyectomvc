@@ -35,5 +35,5 @@
     </table>
 </div>
 <?php
-    include($_SERVER['DOCUMENT_ROOT']."/layout/footer.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/layout/footer.php");
 ?>
